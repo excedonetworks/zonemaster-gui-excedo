@@ -55,8 +55,8 @@ const languages = config.enabledLanguages.map((lang) => ({
         const newLanguage = target.value;
         let canonicalPath = document.location.pathname;
 
-        if (!canonicalPath.startsWith(`${base}${currentLanguage}`)) {
-            canonicalPath = canonicalPath.replace(`${base}`, `${base}${currentLanguage}`);
+        if (!canonicalPath.startsWith(`${base}${currentLanguage}/`)) {
+            canonicalPath = canonicalPath.replace(`${base}`, `${base}${currentLanguage}/`);
         }
 
         canonicalPath = canonicalPath.replace(
