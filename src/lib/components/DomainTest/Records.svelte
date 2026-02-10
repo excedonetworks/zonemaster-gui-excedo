@@ -14,6 +14,7 @@
     let { currentContext } = $derived(machine);
     let fetchingZoneData = $state(false);
     const algorithms = [
+        { value: '', name: '' },
         { value: '1', name: '1 - RSAMD5' },
         { value: '3', name: '3 - DSA' },
         { value: '5', name: '5 - RSASHA1' },
@@ -29,6 +30,7 @@
     ];
 
     const digestTypes = [
+        { value: '', label: '' },
         { value: '1', name: '1 - SHA-1' },
         { value: '2', name: '2 - SHA-256' },
         { value: '3', name: '3 - GOST R 34.11-94' },
@@ -115,6 +117,7 @@
         };
     });
 </script>
+
 <fieldset class="zm-domain-test__records">
     <legend>{m.DSRecords()}</legend>
     <Stack vertical gap="s">
