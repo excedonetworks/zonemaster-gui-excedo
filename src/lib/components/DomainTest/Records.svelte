@@ -74,6 +74,10 @@
             return;
         }
 
+        if (form.reportValidity() === false) {
+            return;
+        }
+
         const input = form.querySelector('input[name="domain"]') as HTMLInputElement;
         const domain = input.value;
 
@@ -178,7 +182,7 @@
             onClick={fetch}
             disabled={fetchingZoneData}
         >
-            {m.fetchDSRecords()}
+            {fetchingZoneData ? m.fetching() : m.fetchDSRecords()}
         </Button>
     </Stack>
 </fieldset>
