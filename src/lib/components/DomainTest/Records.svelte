@@ -26,7 +26,9 @@
         { value: '13', name: '13 - ECDSAP256SHA256' },
         { value: '14', name: '14 - ECDSAP384SHA384' },
         { value: '15', name: '15 - ED25519' },
-        { value: '16', name: '16 - ED448' }
+        { value: '16', name: '16 - ED448' },
+        { value: '17', name: '17 - SM2SM3' },
+        { value: '23', name: '23 - ECC-GOST12' }
     ];
 
     const digestTypes = [
@@ -34,7 +36,9 @@
         { value: '1', name: '1 - SHA-1' },
         { value: '2', name: '2 - SHA-256' },
         { value: '3', name: '3 - GOST R 34.11-94' },
-        { value: '4', name: '4 - SHA-384' }
+        { value: '4', name: '4 - SHA-384' },
+        { value: '5', name: '5 - GOST R 34.11-2012' },
+        { value: '6', name: '6 - SM3' }
     ];
 
     let records = $state([
