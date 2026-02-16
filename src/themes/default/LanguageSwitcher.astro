@@ -16,7 +16,7 @@ const languageLabels = {
 };
 const languages = config.enabledLanguages.map((lang) => ({
     code: lang,
-    label: languageLabels[lang],
+    label: languageLabels[lang] ?? lang,
 }));
 ---
 
