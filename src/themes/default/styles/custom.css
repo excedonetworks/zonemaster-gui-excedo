@@ -328,19 +328,33 @@ select.zm-input {
 
 .zm-domain-test__progress {
     border-radius: 30px;
+    border: 1px solid #cfcfcf;
+    background: #f8f8f8;
 }
 
 .zm-domain-test.zm-is-testing .zm-domain-test__progress-bar {
-    background-image: linear-gradient(
-        45deg,
-        rgba(219, 107, 26, 0.35) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(219, 107, 26, 0.35) 50%,
-        rgba(219, 107, 26, 0.35) 75%,
-        transparent 75%,
-        transparent
-    );
+    top: auto;
+    height: 6px;
+    bottom: 0;
+    opacity: 1;
+    background: linear-gradient(90deg, #db6b1a 0%, #f18a3f 100%);
+    animation: none;
+    z-index: 1;
+}
+
+.zm-domain-test.zm-is-testing .zm-domain-test__progress .zm-input {
+    position: relative;
+    z-index: 2;
+    background: transparent;
+}
+
+.zm-domain-test__running-btn[disabled],
+.zm-domain-test__running-btn[disabled]:hover,
+.zm-domain-test__running-btn[disabled]:focus {
+    background: #6d6e76;
+    border-color: #6d6e76;
+    color: #fff;
+    text-shadow: none;
 }
 
 .zm-alert {

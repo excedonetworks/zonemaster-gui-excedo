@@ -102,6 +102,7 @@
             type="submit"
             disabled={currentState === 'testing'}
             variant="primary"
+            class={currentState === 'testing' ? 'zm-domain-test__running-btn' : undefined}
         >
             {currentState !== 'testing' ? m.startTestBtn() : m.runningTest()}
             {#if currentState === 'testing'}
