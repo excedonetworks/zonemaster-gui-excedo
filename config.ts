@@ -5,7 +5,7 @@ const config: Config = {
     defaultLanguage: 'en',
     enabledLanguages: ['da', 'en', 'es', 'fi', 'fr', 'nb', 'sv', 'sl'],
     baseUrl: import.meta.env.PUBLIC_BASE_URL || '/',
-    apiBaseUrl: import.meta.env.PUBLIC_API_URL || 'https://zonemaster.excedonet.net/api',
+    apiBaseUrl: import.meta.env.PUBLIC_API_URL || 'https://zonemaster.excedo.online/api',
     pollingInterval: import.meta.env.PUBLIC_POLLING_INTERVAL || 5000,
     clientInfo: {
         version: packageJson.version,
