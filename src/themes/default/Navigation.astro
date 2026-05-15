@@ -6,6 +6,10 @@ import { getLocale } from '@/messages';
 const currentLanguage = getLocale();
 const homeUrl = getRelativeLocaleUrl(currentLanguage, '/');
 const faqUrl = getRelativeLocaleUrl(currentLanguage, '/faq');
+const helpUrl =
+    currentLanguage === 'sv'
+        ? 'https://www.excedo.se/kontakt'
+        : 'https://www.excedo.se/en/contact';
 const { pathname } = Astro.url;
 ---
 
@@ -27,6 +31,13 @@ const { pathname } = Astro.url;
                     { ['is-active']: pathname === faqUrl },
                 ]}
                 href={faqUrl}>{m.faqNav()}</a
+            >
+        </li>
+        <li>
+            <a
+                class="zm-menu__item zm-menu__item--help"
+                href={helpUrl}
+                >Need Help</a
             >
         </li>
     </ul>

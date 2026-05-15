@@ -127,7 +127,12 @@
 </script>
 
 <div class="zm-result">
-    <h2 class="zm-result__title">{m.testResultFor()} {data.params.domain}</h2>
+    <div class="zm-result__summary">
+        <p class="zm-result__eyebrow">Result domain</p>
+        <h2 class="zm-result__title">
+            {m.testResultFor()} <span class="zm-result__domain">{data.params.domain}</span>
+        </h2>
+    </div>
     <Stack middle wrap spaceBetween>
         <div>
             {m.createdOn()}
@@ -274,7 +279,7 @@
         </Stack>
     </Stack>
     <Stack vertical gap="m">
-        <fieldset class="zm-fieldset">
+        <fieldset class="zm-fieldset zm-result__filters">
             <legend>{m.filterSeverityLevels()}</legend>
             <Stack gap="xs" middle wrap>
                 <FilterToggle
@@ -338,11 +343,13 @@
             </Stack>
         </fieldset>
         {#if aboutLevels}
-            <Collapsible
-                title={aboutLevels.question}
-                id={'helper'}
-                content={aboutLevels.answer}
-            ></Collapsible>
+            <div class="zm-result__severity-help">
+                <Collapsible
+                    title={aboutLevels.question}
+                    id={'helper'}
+                    content={aboutLevels.answer}
+                ></Collapsible>
+            </div>
         {/if}
         <fieldset
             class="zm-fieldset {stack.stack} {stack.wrap} {stack.bottom} {stack[

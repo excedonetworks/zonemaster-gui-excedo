@@ -5,7 +5,7 @@ const config: Config = {
     defaultLanguage: 'en',
     enabledLanguages: ['da', 'en', 'es', 'fi', 'fr', 'nb', 'sv', 'sl'],
     baseUrl: import.meta.env.PUBLIC_BASE_URL || '/',
-    apiBaseUrl: import.meta.env.PUBLIC_API_URL || '/api',
+    apiBaseUrl: import.meta.env.PUBLIC_API_URL || 'https://zonemaster.excedonet.net/api',
     pollingInterval: import.meta.env.PUBLIC_POLLING_INTERVAL || 5000,
     clientInfo: {
         version: packageJson.version,
@@ -13,7 +13,7 @@ const config: Config = {
     },
     siteInfo: {
         email: 'contact@zonemaster.net',
-        siteName: '',
+        siteName: 'Zonemaster',
     },
     setTitle(title: string) {
         return `${title} – Zonemaster`;

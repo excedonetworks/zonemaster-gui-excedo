@@ -2,6 +2,10 @@ import { defineMiddleware } from 'astro:middleware';
 import { setLocale, isValidLocale } from '@/messages';
 
 export const onRequest = defineMiddleware(({ url }, next) => {
+    if (!url.pathname.endsWith('/') && !url.pathname.includes('.')) {
+        return Response.redirect(`${url.origin}${url.pathname}/${url.search}`, 308);
+    }
+
     // base should always end with '/'
     const base = import.meta.env.BASE_URL;
     let pathname = url.pathname;

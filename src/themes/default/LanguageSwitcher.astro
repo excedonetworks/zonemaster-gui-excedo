@@ -18,56 +18,44 @@ const languages = config.enabledLanguages.map((lang) => ({
     code: lang,
     label: languageLabels[lang] ?? lang,
 }));
+
+const base = import.meta.env.BASE_URL;
+const pathname = Astro.url.pathname;
+
+const withLocalePrefix = pathname.startsWith(`${base}${currentLanguage}/`)
+    ? pathname
+    : pathname.replace(`${base}`, `${base}${currentLanguage}/`);
+
+const localeLinks = languages.map((lang) => ({
+    ...lang,
+    href: withLocalePrefix.replace(
+        `${base}${currentLanguage}`,
+        `${base}${lang.code}`,
+    ),
+}));
 ---
 
-<div class="zm-language-switcher">
-    <i class="bi bi-translate zm-language-switcher__icon"></i>
-    <label for="languageSwitcher" class="zm-u-visually-hidden"
-        >{m.langLabel()}</label
-    >
-    <select
-        class="zm-language-switcher__select"
-        id="languageSwitcher"
-        data-current-language={currentLanguage}
-    >
+<details class="zm-language-switcher">
+    <summary aria-label={m.langLabel()}>
+        <i class="bi bi-globe zm-language-switcher__icon"></i>
+        <span class="zm-language-switcher__current">{currentLanguage.toUpperCase()}</span>
+        <i class="bi bi-chevron-down zm-language-switcher__arrow"></i>
+    </summary>
+    <ul class="zm-language-switcher__menu">
         {
-            languages.map((lang) => (
-                <option
-                    lang={lang.code}
-                    value={lang.code}
-                    selected={currentLanguage === lang.code}
-                >
-                    {lang.label}
-                </option>
+            localeLinks.map((lang) => (
+                <li>
+                    <a
+                        href={lang.href}
+                        lang={lang.code}
+                        class={currentLanguage === lang.code
+                            ? 'is-active'
+                            : undefined}
+                    >
+                        {lang.code.toUpperCase()}
+                    </a>
+                </li>
             ))
         }
-    </select>
-</div>
-<script>
-    const languageSwitcher = document.getElementById('languageSwitcher');
-
-    function switchToLanguage(e: Event) {
-        const base = import.meta.env.BASE_URL;
-        const currentLanguage = languageSwitcher?.getAttribute(
-            'data-current-language',
-        );
-        const target = e.target as HTMLSelectElement;
-        const newLanguage = target.value;
-        let canonicalPath = document.location.pathname;
-
-        if (!canonicalPath.startsWith(`${base}${currentLanguage}/`)) {
-            canonicalPath = canonicalPath.replace(`${base}`, `${base}${currentLanguage}/`);
-        }
-
-        canonicalPath = canonicalPath.replace(
-            `${base}${currentLanguage}`,
-            `${base}${newLanguage}`,
-        );
-
-        document.location.href = canonicalPath;
-    }
-
-    document
-        .getElementById('languageSwitcher')
-        ?.addEventListener('change', switchToLanguage);
-</script>
+    </ul>
+</details>

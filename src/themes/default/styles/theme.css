@@ -12,9 +12,9 @@
     --rhythm: 1lh;
 
     --font-body-family:
-        system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
-        'Noto Sans', 'Liberation Sans', Arial, sans-serif, 'Apple Color Emoji',
-        'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+        'Lato', 'Helvetica Neue', Helvetica, Arial, sans-serif,
+        'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
     --font-body-size: var(--font-s);
     --font-body-line-height: 1.5;
     --font-body-weight: 400;
@@ -46,21 +46,21 @@
     --color-palette-white: #fff;
     --color-palette-black: #000;
 
-    /** Fuchsia Blue */
+    /** Excedo orange */
     --color-palette-main-0: var(--color-palette-white);
-    --color-palette-main-10: #edebff;
-    --color-palette-main-30: #b2aafb;
-    --color-palette-main-50: #7255d9;
-    --color-palette-main-70: #593fb7;
-    --color-palette-main-90: #271a5b;
+    --color-palette-main-10: #fff4ea;
+    --color-palette-main-30: #f5bf95;
+    --color-palette-main-50: #db6b1a;
+    --color-palette-main-70: #b9550c;
+    --color-palette-main-90: #5f2b05;
 
-    /** Electric indigo */
+    /** Excedo accent blue */
     --color-palette-secondary-0: var(--color-palette-white);
-    --color-palette-secondary-10: #edeafc;
-    --color-palette-secondary-30: #a27bff;
-    --color-palette-secondary-50: #8846ff;
-    --color-palette-secondary-70: #7a21ff;
-    --color-palette-secondary-90: #2e0471;
+    --color-palette-secondary-10: #eff6ff;
+    --color-palette-secondary-30: #9fcaef;
+    --color-palette-secondary-50: #5499d5;
+    --color-palette-secondary-70: #017add;
+    --color-palette-secondary-90: #0f3d69;
 
     /** Woodsmoke */
     --color-palette-black-0: var(--color-palette-white);
@@ -123,11 +123,11 @@
     --color-text: var(--color-palette-black-90);
     --color-text-highlight: var(--color-palette-secondary-70);
     --color-muted-text: var(--color-palette-black-60);
-    --color-border: var(--color-palette-main-30);
+    --color-border: #6d6e76;
     --color-tab-highlight: #ff4069;
 
     /* Shape */
-    --border-radius: 8px;
+    --border-radius: 10px;
 
     /* Buttons */
     --button-color: var(--color-palette-main-50);
@@ -137,16 +137,16 @@
     --button-border-color: var(--color-palette-main-50);
     --button-border-color-hover: var(--border-color-hover);
 
-    --button-secondary-color: var(--color-palette-black-30);
-    --button-secondary-color-hover: var(--color-palette-black-40);
+    --button-secondary-color: #6d6e76;
+    --button-secondary-color-hover: #5e5f66;
     --button-secondary-text-color: var(--color-palette-black-90);
     --button-secondary-text-color-hover: var(--color-palette-black-90);
-    --button-secondary-border-color: var(--color-palette-black-40);
-    --button-secondary-border-hover-color: var(--color-palette-black-40);
+    --button-secondary-border-color: #6d6e76;
+    --button-secondary-border-hover-color: #5e5f66;
 
     --button-border-color-alternate: var(--color-palette-main-50);
     --button-border-color-disabled: var(--color-palette-black-50);
-    --button-size: 46px;
+    --button-size: 50px;
     --button-font-size: var(--font-s);
     --button-padding: var(--spacing-s);
     --button-size-small: 38px;
@@ -156,12 +156,12 @@
     --button-icon-size-small: var(--font-s);
 
     /* Border */
-    --border-color: var(--color-palette-main-50);
-    --border-color-hover: var(--color-palette-main-70);
+    --border-color: #6d6e76;
+    --border-color-hover: #5e5f66;
 
     /* Control */
     --control-size: 32px;
-    --input-height: 46px;
+    --input-height: 50px;
     --input-height-small: 38px;
 
     /* Layout */

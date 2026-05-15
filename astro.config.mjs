@@ -13,7 +13,7 @@ import messagesPlugin, { messagesIntegration } from './scripts/messages-plugin.t
 // https://astro.build/config
 export default defineConfig({
     base: config.baseUrl,
-    trailingSlash: "always",
+    trailingSlash: "ignore",
     output: process.env.NODE_ENV === 'production' ? 'static' : 'server',
 
     outDir: './public/dist',

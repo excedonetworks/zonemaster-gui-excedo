@@ -1,1 +1,442 @@
-/** Add your custom styles here */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+html,
+body {
+    font-family: var(--font-body-family);
+}
+
+h1 {
+    color: var(--color-palette-main-50);
+    font-size: 2.25rem;
+    font-weight: 300;
+    position: relative;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 185px;
+    background-color: var(--color-palette-main-50);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    bottom: 0;
+}
+
+.zm-header {
+    background: #000;
+    box-shadow: 0 7px 5px -9px rgba(0, 0, 0, 0.75);
+}
+
+.zm-header__navigation-group[aria-hidden='false'] {
+    background-color: #1e1e1f;
+}
+
+.zm-menu__list li {
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+}
+
+.zm-menu__item,
+.zm-header__sitename,
+.zm-mobile-menu-btn,
+.zm-mobile-menu-btn span {
+    color: #fff;
+}
+
+.zm-header__group {
+    min-height: 74px;
+}
+
+.zm-menu {
+    @media screen and (min-width: 769px) {
+        margin-left: 2rem;
+    }
+}
+
+.zm-menu__item {
+    font-size: 1.1rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+
+    @media screen and (min-width: 769px) {
+        padding: 0 0.8rem;
+    }
+}
+
+.zm-menu__item:hover,
+.zm-menu__item.is-active {
+    color: #fff;
+}
+
+.zm-menu__item:hover::after,
+.zm-menu__item.is-active::after {
+    background-color: var(--color-palette-main-50);
+}
+
+.zm-menu__item--help {
+    border: 1px solid #6d6e76;
+    border-radius: 999px;
+    height: 36px;
+    padding: 0 14px;
+    margin: 0 0.2rem;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.zm-menu__item--help:hover,
+.zm-menu__item--help:focus {
+    background: #1f1f21;
+    color: #fff;
+    text-decoration: none;
+}
+
+.zm-menu__item--help:hover::after,
+.zm-menu__item--help.is-active::after {
+    display: none;
+}
+
+.zm-header__sitename {
+    display: none;
+}
+
+.zm-header__sitename {
+    display: block;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-left: 0.75rem;
+}
+
+.zm-main {
+    padding-top: var(--spacing-l);
+}
+
+.zm-home-hero {
+    padding-top: 0;
+}
+
+.zm-result-page-title {
+    margin-bottom: 1.2rem;
+    color: #202124;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding-bottom: 0.5rem;
+}
+
+.zm-result-page-title::after {
+    width: 140px;
+    height: 2px;
+    background-color: var(--color-palette-main-50);
+}
+
+.zm-faq-title {
+    color: #202124;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    padding-bottom: 0.5rem;
+}
+
+.zm-faq-title::after {
+    width: 140px;
+    height: 2px;
+    background-color: var(--color-palette-main-50);
+}
+
+.zm-page-section-title {
+    color: #202124;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    margin-bottom: 1rem;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 0.45rem;
+}
+
+.zm-page-section-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 140px;
+    height: 2px;
+    background-color: var(--color-palette-main-50);
+}
+
+.zm-result__filters {
+    background: #f1f1f1;
+    border: 1px solid #cdcdcd;
+    border-radius: 10px;
+    padding: 14px 16px;
+}
+
+.zm-result__filters legend {
+    font-size: 1.05rem;
+}
+
+.zm-result__filters .zm-filter-toggle {
+    background: #fff;
+    border: 1px solid #c4c4c4;
+    border-radius: 12px;
+    padding: 6px 10px;
+}
+
+.zm-result__severity-help .zm-collapsible {
+    border-radius: 10px;
+    border-color: #cdcdcd;
+    background: #efefef;
+}
+
+.zm-result__severity-help .zm-collapsible h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.zm-result__severity-help .zm-collapsible header {
+    padding: 12px 16px;
+}
+
+.zm-result__summary {
+    background: #fff;
+    border: 1px solid #d1d1d1;
+    border-left: 6px solid var(--color-palette-main-50);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.zm-result__eyebrow {
+    margin: 0 0 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #6b6b6b;
+}
+
+.zm-result__title {
+    margin: 0;
+}
+
+.zm-result__domain {
+    color: var(--color-palette-main-70);
+    font-weight: 700;
+    word-break: break-word;
+}
+
+.zm-domain-test {
+    background-color: #fff;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+
+.zm-input,
+select.zm-input {
+    border: 2px solid #6d6e76;
+    border-radius: 0;
+}
+
+.zm-input:focus {
+    box-shadow: 0 0 0 2px rgba(219, 107, 26, 0.25);
+    border-color: var(--color-palette-main-50);
+}
+
+.zm-button {
+    border-radius: 30px;
+    border-color: var(--color-palette-main-50);
+    background: var(--color-palette-main-50);
+}
+
+.zm-button:hover,
+.zm-button:focus {
+    background: var(--color-palette-main-70);
+    border-color: var(--color-palette-main-70);
+}
+
+.zm-button--secondary {
+    background: #6d6e76;
+    border-color: #6d6e76;
+    color: #fff;
+}
+
+.zm-button--secondary:hover,
+.zm-button--secondary:focus {
+    background: #595a61;
+    border-color: #595a61;
+}
+
+.zm-button--danger {
+    background: #c0392b;
+    border-color: #c0392b;
+}
+
+.zm-button--danger:hover,
+.zm-button--danger:focus {
+    background: #9f2c20;
+    border-color: #9f2c20;
+}
+
+.zm-button--transparent {
+    background: transparent;
+    border-color: transparent;
+    color: inherit;
+    border-radius: 0;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.zm-button--transparent:hover,
+.zm-button--transparent:focus {
+    background: transparent;
+    border-color: transparent;
+    color: inherit;
+}
+
+.zm-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.zm-switch .switch-toggle {
+    width: 30px;
+    min-width: 30px;
+    height: 30px;
+    padding: 0;
+    border-radius: 6px;
+    background: #f1f1f1;
+    border: 1px solid #6d6e76;
+    color: #2d2c2f;
+}
+
+.zm-switch .switch-toggle:hover,
+.zm-switch .switch-toggle:focus {
+    background: #e5e5e5;
+    border-color: #595a61;
+    color: #1f1f21;
+}
+
+.zm-domain-test__progress {
+    border-radius: 30px;
+}
+
+.zm-domain-test.zm-is-testing .zm-domain-test__progress-bar {
+    background-image: linear-gradient(
+        45deg,
+        rgba(219, 107, 26, 0.35) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(219, 107, 26, 0.35) 50%,
+        rgba(219, 107, 26, 0.35) 75%,
+        transparent 75%,
+        transparent
+    );
+}
+
+.zm-alert {
+    border-radius: 0;
+}
+
+.zm-footer {
+    background-color: #414044;
+    color: #fff;
+}
+
+.zm-footer a,
+.zm-footer p,
+.zm-footer li,
+.zm-footer i {
+    color: #fff;
+}
+
+.zm-footer .zm-footer-copyright {
+    background-color: #2d2c2f;
+    color: #fff;
+    font-size: 0.75rem;
+}
+
+.zm-faq-title {
+    margin-bottom: 2.2rem;
+}
+
+.zm-faq-paragraph,
+.preamble {
+    max-width: 760px;
+}
+
+.zm-faq-paragraph {
+    margin-bottom: 1.5rem;
+}
+
+.zm-faq-section__header {
+    color: #202124;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.zm-collapsible {
+    background-color: #efefef;
+    border: 1px solid #c9c9c9;
+    border-radius: 12px;
+}
+
+.zm-collapsible header {
+    padding: 14px 22px;
+}
+
+.zm-collapsible h2 {
+    color: #202124;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.zm-collapsible a {
+    color: #202124;
+    text-decoration: none;
+}
+
+.zm-collapsible a:hover h2,
+.zm-collapsible a:focus h2 {
+    color: var(--color-palette-main-70);
+    text-decoration: underline;
+}
+
+.zm-collapsible i {
+    color: var(--color-palette-main-50);
+    font-size: 1rem;
+}
+
+.zm-collapsible-content {
+    background-color: #fff;
+    border-top: 1px solid #d7d7d7;
+    padding: 18px 22px;
+}
+
+.zm-collapsible-content p,
+.zm-collapsible-content ul,
+.zm-collapsible-content ol {
+    max-width: 76ch;
+}
+
+@media (max-width: 767px) {
+    .zm-domain-test {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+}

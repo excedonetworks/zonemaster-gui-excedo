@@ -17,7 +17,7 @@ const data: FaqItem | null = aboutLevels
     : null;
 ---
 
-<h1 class="container zm-u-align-center">{m.resultTitle()}</h1>
-<section class="zm-run-test rhythm">
+<h1 class="container zm-u-align-center zm-result-page-title">{m.resultTitle()}</h1>
+<section class="zm-run-test zm-result-hero rhythm">
     <DomainTest aboutLevels={data} client:load />
 </section>
