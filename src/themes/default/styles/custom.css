@@ -48,7 +48,7 @@ h1::after {
 }
 
 .zm-header__group {
-    min-height: 74px;
+    min-height: 94px;
 }
 
 .zm-menu {
@@ -186,6 +186,42 @@ h1::after {
     border: 1px solid #c4c4c4;
     border-radius: 12px;
     padding: 6px 10px;
+}
+
+.zm-result__filters .zm-filter-toggle {
+    color: #1f1f21;
+    text-shadow: none;
+}
+
+.zm-result__filters .zm-filter-toggle.zm-is-active {
+    color: #1f1f21;
+    text-shadow: none;
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.08);
+}
+
+.zm-result__filters .zm-filter-toggle.zm-is-active.zm--info {
+    background: #e9f7ef;
+    border-color: #4aa574;
+}
+
+.zm-result__filters .zm-filter-toggle.zm-is-active.zm--notice {
+    background: #e8f5fb;
+    border-color: #2d8fb6;
+}
+
+.zm-result__filters .zm-filter-toggle.zm-is-active.zm--warning {
+    background: #fff3df;
+    border-color: #d98914;
+}
+
+.zm-result__filters .zm-filter-toggle.zm-is-active.zm--error {
+    background: #fbe8ee;
+    border-color: #c83b63;
+}
+
+.zm-result__filters .zm-filter-toggle.zm-is-active.zm--critical {
+    background: #f8e5f1;
+    border-color: #7b1f52;
 }
 
 .zm-result__severity-help .zm-collapsible {

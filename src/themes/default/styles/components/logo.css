@@ -1,12 +1,12 @@
 .zm-logo img {
-    width: 180px;
+    width: 280px;
     height: auto;
 
     @media screen and (min-width: 769px) {
-        width: 220px;
+        width: 360px;
     }
 
     @media screen and (min-width: 1200px) {
-        width: 250px;
+        width: 400px;
     }
 }
